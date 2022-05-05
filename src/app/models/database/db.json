@@ -2,7 +2,7 @@
   "todos": [
     {
       "title": "qui ullam ratione quibusdam voluptatem quia omnis",
-      "completed": false,
+      "completed": true,
       "id": 6
     },
     {
@@ -12,7 +12,7 @@
     },
     {
       "title": "quo adipisci enim quam ut ab",
-      "completed": false,
+      "completed": true,
       "id": 8
     },
     {
