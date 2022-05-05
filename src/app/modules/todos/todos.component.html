@@ -1,0 +1,33 @@
+<div class="container px-4 mx-auto">
+  <p class="py-8 text-5xl font-semibold text-center">My Todos</p>
+  <div
+    class="flex items-center justify-center max-w-2xl px-6 py-5 mx-auto mb-6 space-x-2 font-semibold text-white transition duration-200 bg-blue-500 rounded-md cursor-pointer hover:bg-blue-600"
+    (click)="openDialog()"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="3"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="feather feather-plus-circle"
+    >
+      <circle cx="12" cy="12" r="10"></circle>
+      <line x1="12" y1="8" x2="12" y2="16"></line>
+      <line x1="8" y1="12" x2="16" y2="12"></line>
+    </svg>
+    <span>Add Todo</span>
+  </div>
+  <div *ngFor="let todo of todos" class="max-w-2xl py-2 mx-auto">
+    <app-todo
+      [todo]="todo"
+      (updateTodo)="updateTodo($event)"
+      (delete)="deleteTodo(todo.id)"
+    >
+    </app-todo>
+  </div>
+</div>

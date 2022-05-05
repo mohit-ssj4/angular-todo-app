@@ -1,0 +1,27 @@
+<form
+  [formGroup]="addTodoFrom"
+  (ngSubmit)="addTodo()"
+  class="flex flex-col items-center"
+>
+  <div class="w-full">
+    <mat-form-field appearance="outline" color="accent" class="w-full">
+      <mat-label>Enter todo task</mat-label>
+      <input
+        matInput
+        placeholder="Enter todo task"
+        formControlName="title"
+        autocomplete="off"
+      />
+    </mat-form-field>
+  </div>
+  <button
+    type="submit"
+    mat-raised-button
+    color="primary"
+    aria-label="Example icon button with a menu icon"
+    class="w-full !py-2 font-semibold"
+    [disabled]="addTodoFrom.invalid"
+  >
+    <span>Add Todo</span>
+  </button>
+</form>
